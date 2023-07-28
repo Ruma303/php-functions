@@ -26,14 +26,15 @@ return "Ciao, $nome!";
 };
 echo $saluta("Mario");  // Ciao, Mario!" */
 
-//$ Closure: Passare una funzione come argomento a un'altra funzione
+//$ Callback: Passare una funzione come argomento a un'altra funzione
 
-/* function funzioneSuperiore($callback, 5) {
-    echo "Funzione anonima \$funzioneSuperiore() eseguita.<br>";
-    return $callback(5);
-} */
+    /* function funzioneSuperiore($callback, 5) {
+        echo "Funzione anonima \$funzioneSuperiore() eseguita.<br>";
+        return $callback(5);
+    } */
 
-   /*  function funzioneSuperiore($funzione, $valore) {
+    /* function funzioneSuperiore(callable $funzione, $valore) {
+        //var_dump($funzione);
         echo "Funzione anonima \$funzioneSuperiore() eseguita.<br>";
         return $funzione($valore);
     }
@@ -41,4 +42,7 @@ echo $saluta("Mario");  // Ciao, Mario!" */
         echo "Funzione anonima \$callback() eseguita.<br>";
         return $numero * 2;
     };
-    echo funzioneSuperiore($callback, 5); */
+    echo funzioneSuperiore($callback, 10); */
+
+
+//% Arrow function

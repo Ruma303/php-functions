@@ -65,3 +65,48 @@ function stampaSomma($numero) {
 }
 stampaSomma($somma); // La somma è: 15. */
 
+
+//% Funzioni pure e impure
+
+//$ Funzioni pure
+/* function aggiungi($a, $b) {
+    return $a + $b;
+}
+echo aggiungi(5, 3); // 8 */
+
+//$ Funzioni impure
+/* $counter = 0;
+function incrementa() {
+    global $counter;
+    $counter++;
+}
+incrementa();
+echo $counter; // 1 */
+
+/* function leggiFile($nomeFile) {
+    return file_get_contents($nomeFile);
+} */
+
+
+//% Ricorsione
+/* function fattoriale($numero) {
+    if ($numero == 0) {
+        return 1; // Caso base
+    } else {
+        return $numero * fattoriale($numero - 1); // Chiamata ricorsiva
+    }
+}
+echo fattoriale(5);  // 120 */
+
+
+//% Chiamate a funzioni dinamiche
+/* function chiara() {
+    echo "Mi chiamo Chiara. <br>";
+}
+function francesca() {
+    echo "Mi chiamo Francesca. <br>";
+}
+$nome = "chiara";
+$nome(); // Mi chiamo Chiara.
+$nome = "francesca";
+$nome(); // Mi chiamo Francesca. */
