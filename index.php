@@ -1,10 +1,12 @@
 <?php //% Aspetti delle funzioni
 
+//include './fn.php';
+
 //$ Sintassi delle funzioni
 
-// Definizione funzione
+//* Definizione funzione
 /* function saluta() {
-    echo "Ciao, mondo!";
+    echo "Ciao, mondo!<br>";
 }
 saluta();
 saluta();
@@ -13,6 +15,7 @@ saluta(); */
 //$ Pre-invocazione
 
     /* saluta();
+
     function saluta() {
         echo "Ciao, mondo!";
     }
@@ -23,11 +26,10 @@ saluta(); */
             echo "Questa funzione non esiste ancora.";
         }
     }
-    miaFunzione();  //! Errore */
+    miaFunzione(); */  //! Errore
 
 
 //% Parametri delle funzioni
-
 
 //$ Variabili esterne nelle funzioni
 /* $username = 'Topolino';
@@ -46,8 +48,8 @@ echo "Fuori la funzione: $username."; */
     echo "Ciao, $nome.<br>";
 }
 saluta('Lorenzo');
-saluta('Elisa'); */
-
+saluta('Elisa');
+ */
 
 //* Cosa avviene implicitamente
 /* function saluta() {
@@ -61,10 +63,10 @@ saluta(); */
 
 //$ Passare variabili esterne come parametri
 /* $nome = 'Mirko';
+saluta($nome);
 function saluta($nome) {
     echo "Ciao $nome.";
-}
-saluta($nome); */
+} */
 
 
 //$ Nomi e numeri dei parametri
@@ -93,8 +95,8 @@ sommaNumeri($numero2 % 3, pow(5,2)); // 27 */
 }
 echo somma(1, 2, 3, 4); // 10 */
 
-/*
-function somma($a, $b, ...$numeri) {
+
+/* function somma($a, $b, ...$numeri) {
     echo '<pre>';
     print_r($numeri); // 3
     echo '<pre>';
@@ -104,36 +106,36 @@ function somma($a, $b, ...$numeri) {
     }
     echo "Somma: $somma";
 }
-echo somma(1, 2, 3); // 6
- */
+echo somma(1, 2, 3); */ // 6
+
 
 
 
 //$ Tipologia di passaggio dei parametri
 
 //* Per valore
-/* function aggiungiCinque($numero) {
+/* $test_numero = 10;
+function aggiungiCinque($numero) {
     $numero += 5;
 }
-$test_numero = 10;
 aggiungiCinque($test_numero);
 echo $test_numero; // 10 */
 
 
 //* Per riferimento
-/* function aggiungiCinque(&$numero) {
+/* $test_numero = 10;
+echo $test_numero; // 10
+function aggiungiCinque(&$numero) {
     $numero += 5;
 }
-$test_numero = 10;
 aggiungiCinque($test_numero);
-echo $test_numero; // 15 */
-
+echo $test_numero; // 15
+ */
 
 
 //$ Parametri opzionali
-
-/* function saluta($nome = "Ospite", $cognome) {
-    echo "Ciao, $nome!";
+/* function saluta($nome = "Ospite") {
+    echo "Ciao, $nome!<br>";
 }
 saluta("Luigi"); // Ciao, Luigi!
 saluta();        // Ciao, Ospite! */
@@ -141,23 +143,21 @@ saluta();        // Ciao, Ospite! */
 
 
 //$ Type hinting
-
-
 /* function somma(int $a, int $b) {
-    return $a + $b;
+    return $a + $b . '<br>';
 }
 echo somma(1, 2); // 3
 echo somma("1", "2");
 // 3, le stringhe numeriche vengono convertite in interi
-echo somma("uno", "due");
-//! Errore: argomenti non validi */
+echo somma("uno", "due"); */
+//! Errore: argomenti non validi
 
 
 /* function somma(int $a, int $b): int {
     return $a + $b;
 }
-echo somma("1", "2"); //3
- */
+echo somma("1", "2"); //3 */
+
 
 
 //* Modalità strict
@@ -165,20 +165,22 @@ echo somma("1", "2"); //3
 function somma(int $a, int $b) {
     return $a + $b;
 }
-echo somma("1", "2"); //! Errore: argomenti non validi */
+echo somma("1", "2"); */
+//! Errore: argomenti non validi
 
 
 //* Union Types
-//declare(strict_types = 1);
-/*function stampa(string|float|int|bool|array $value) {
+/* declare(strict_types = 1);
+function stampa(string|float|int|bool|array $value) {
 //function stampa(mixed $value) {
-//function stampa(?float $value) {
+//function stampa(float|int $value): float|int {
     var_dump($value);
     echo '<br>';
+    return $value;
 } */
-/* stampa('Ciao, mondo!');
-stampa(123);
-stampa(3.14);
-stampa(true);
-stampa([]); */
+//stampa('Ciao, mondo!');
+//stampa(3.14);
+//stampa(123);
+//stampa(true);
+//stampa([]);
 //stampa(null); // NULL
