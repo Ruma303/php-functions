@@ -1,22 +1,21 @@
 <?php
 
 //% Variabili static
-
 /* function counting() {
     static $count = 1;
     echo "Funzione chiamata $count volte.<br>";
     $count++;
 }
+
 counting(); // 1
 counting(); // 2
 counting(); // 3
-counting(); // 4
- */
+counting(); // 4 */
+
 
 
 //% Valori di ritorno delle funzioni
-
-/*  function somma($num1, $num2) {
+/* function somma($num1, $num2){
     return $num1 + $num2;
     echo "Codice non eseguibile.";
 }
@@ -26,17 +25,17 @@ echo $total; // 15 */
 //$ return vs echo
 /* function stampa() {
     return echo '' ;
-} */
-
+}
+ */
 /* function stampa() {
     echo 'Ciao, mondo!';
     return;
-} stampa(); // Ciao, mondo! */
+} stampa(); */ // Ciao, mondo!
 
 /* function stampa() {
     return 'Ciao, mondo!';
 }
-echo stampa(); // Ciao, mondo! */
+echo stampa(); */ // Ciao, mondo!
 
 
 //% Principio di Responsabilità Unica
@@ -44,17 +43,17 @@ echo stampa(); // Ciao, mondo! */
     echo "Codice eseguito. ";
     return $num1 + $num2;
 }
-echo somma(5, 10); // Codice eseguito. 15 */
+echo somma(5, 10); */ // Codice eseguito. 15
 
 /* function somma(int $num1, int $num2) : int {
     return $num1 + $num2;
 }
-echo "Codice eseguito. ";
+//echo "Codice eseguito. <br>";
 echo somma(5, 10); // Codice eseguito. 15 */
 
 
-/* //? Funzione che ritorna la somma
-function somma(int $num1, int $num2) : int {
+//? Funzione che ritorna la somma
+/* function somma(int $num1, int $num2) : int {
     return $num1 + $num2;
 }
 $somma = somma(5, 10);
@@ -69,13 +68,18 @@ stampaSomma($somma); // La somma è: 15. */
 //% Funzioni pure e impure
 
 //$ Funzioni pure
-/* function aggiungi($a, $b) {
+/* $num1 = 5;
+$num2 = 3;
+echo "$num1 <br> $num2 <br>";
+function aggiungi($a, $b) {
     return $a + $b;
 }
-echo aggiungi(5, 3); // 8 */
+echo 'somma: ' . aggiungi($num1, $num2) . '<br>'; // 8
+echo "$num1 <br> $num2 <br>"; */
 
 //$ Funzioni impure
 /* $counter = 0;
+echo $counter;
 function incrementa() {
     global $counter;
     $counter++;
@@ -89,6 +93,11 @@ echo $counter; // 1 */
 
 
 //% Ricorsione
+/* function ricorsione(){
+    ricorsione();
+}ricorsione(); */
+
+
 /* function fattoriale($numero) {
     if ($numero == 0) {
         return 1; // Caso base
@@ -110,3 +119,9 @@ $nome = "chiara";
 $nome(); // Mi chiamo Chiara.
 $nome = "francesca";
 $nome(); // Mi chiamo Francesca. */
+
+
+
+
+
+

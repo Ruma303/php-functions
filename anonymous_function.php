@@ -10,12 +10,11 @@ $nome = "Matteo";
 echo $nome;  // Matteo */
 
 
-
 //% First Class Functions
 
 //$ Funzioni assegnate a variabili
 /* $saluta = function($nome) {
-return "Ciao, $nome!";
+    return "Ciao, $nome!";
 };
 echo $saluta("Mario");  // Ciao, Mario!" */
 
@@ -24,14 +23,14 @@ echo $saluta("Mario");  // Ciao, Mario!" */
 /* function funzioneSuperiore($callback, 5) {
     echo "Funzione anonima \$funzioneSuperiore() eseguita.<br>";
     return $callback(5);
-} */
-
-/* function funzioneSuperiore(callable $funzione, $valore) {
+}
+ */
+/* function funzioneSuperiore(callable $funzione,int|float $valore) {
     //var_dump($funzione);
     echo "Funzione anonima \$funzioneSuperiore() eseguita.<br>";
     return $funzione($valore);
 }
-$callback = function($numero) {
+$callback = function ($numero) {
     echo "Funzione anonima \$callback() eseguita.<br>";
     return $numero * 2;
 };
@@ -44,12 +43,12 @@ echo funzioneSuperiore($callback, 10); */
 $funzione = function() use ($saluto) {
     return $saluto;
 };
-echo $funzione(); // Ciao, mondo!
- */
+echo $funzione(); // Ciao, mondo! */
+
 
 //% Arrow function
 
-//$var = fn(parameters) => expression;
+// $var = fn(parameters) => expression;
 
 /* $saluto = "Ciao, mondo!";
 $funzione = fn() => $saluto;
@@ -65,5 +64,5 @@ $closure = array_map(function($val) use ($factor) {
 
 echo 'Arrow Function: <br>';
 print_r($arrowFunction);
-echo 'Closure: <br>';
+echo '<br>Closure: <br>';
 print_r($closure); */
