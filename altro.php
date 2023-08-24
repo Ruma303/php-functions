@@ -121,7 +121,16 @@ $nome = "francesca";
 $nome(); // Mi chiamo Francesca. */
 
 
-
-
-
-
+//% Named arguments
+/* function createUser($name, $email, $userId = null, $country = null) {
+    echo "New User created. Name: $name,
+    Email: $email, ID: $userId, Country: $country";
+}
+createUser(
+    email: 'gerry@email.me',
+    userId: 29,
+    country: "Germany",
+    name: 'Gerry',
+); */
+// New User created. Name: Gerry, Email: gerry@email.me,
+// ID: 29, Country: Germany
