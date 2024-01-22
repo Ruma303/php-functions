@@ -1,5 +1,5 @@
 <?php
 
-/* function saluta() {
+function saluta() {
     echo "Ciao, mondo!";
-} */
+}
