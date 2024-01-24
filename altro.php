@@ -24,6 +24,7 @@ counting(); // 4 */
 $total = somma(5, 10);
 echo $total; // 15 */
 
+
 //, return vs echo
 /* function stampa() {
     return echo '' ;
@@ -32,12 +33,12 @@ echo $total; // 15 */
 /* function stampa() {
     echo 'Ciao, mondo!';
     return;
-} stampa(); */ // Ciao, mondo!
+} stampa();  // Ciao, mondo! */
 
 /* function stampa() {
     return 'Ciao, mondo!';
 }
-echo stampa(); */ // Ciao, mondo!
+echo stampa(); */// Ciao, mondo!
 
 
 //% Principio di Responsabilità Unica
@@ -45,7 +46,7 @@ echo stampa(); */ // Ciao, mondo!
     echo "Codice eseguito. ";
     return $num1 + $num2;
 }
-echo somma(5, 10); */ // Codice eseguito. 15
+echo somma(5, 10); */// Codice eseguito. 15
 
 /* function somma(int $num1, int $num2) : int {
     return $num1 + $num2;
@@ -79,13 +80,16 @@ function aggiungi($a, $b) {
 echo 'somma: ' . aggiungi($num1, $num2) . '<br>'; // 8
 echo "$num1 <br> $num2 <br>"; */
 
+
 //, Funzioni impure
 /* $counter = 0;
 echo $counter;
+
 function incrementa() {
     global $counter;
     $counter++;
 }
+
 incrementa();
 echo $counter; // 1 */
 
@@ -107,7 +111,8 @@ echo $counter; // 1 */
         return $numero * fattoriale($numero - 1); // Chiamata ricorsiva
     }
 }
-echo fattoriale(5);  // 120 */
+$fattoriale = fattoriale(5);  // 120
+echo $fattoriale; */
 
 
 //% Chiamate a funzioni dinamiche
@@ -124,7 +129,8 @@ $nome(); // Mi chiamo Francesca. */
 
 
 //% Named arguments
-/* function createUser($name, $email, $userId = null, $country = null) {
+/* function createUser($name, $email, $userId = null, $country = null)
+{
     echo "New User created. Name: $name,
     Email: $email, ID: $userId, Country: $country";
 }
@@ -133,6 +139,14 @@ createUser(
     userId: 29,
     country: "Germany",
     name: 'Gerry',
+); */
+
+/* echo "<br><br><br>";
+createUser(
+    'gerry@email.me',
+    29,
+    "Germany",
+    'Gerry',
 ); */
 // New User created. Name: Gerry, Email: gerry@email.me,
 // ID: 29, Country: Germany
