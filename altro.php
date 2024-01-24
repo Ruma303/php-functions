@@ -1,6 +1,7 @@
 <?php
 
 //% Variabili static
+
 /* function counting() {
     static $count = 1;
     echo "Funzione chiamata $count volte.<br>";
@@ -19,10 +20,11 @@ counting(); // 4 */
     return $num1 + $num2;
     echo "Codice non eseguibile.";
 }
+
 $total = somma(5, 10);
 echo $total; // 15 */
 
-//$ return vs echo
+//, return vs echo
 /* function stampa() {
     return echo '' ;
 }
@@ -67,7 +69,7 @@ stampaSomma($somma); // La somma è: 15. */
 
 //% Funzioni pure e impure
 
-//$ Funzioni pure
+//, Funzioni pure
 /* $num1 = 5;
 $num2 = 3;
 echo "$num1 <br> $num2 <br>";
@@ -77,7 +79,7 @@ function aggiungi($a, $b) {
 echo 'somma: ' . aggiungi($num1, $num2) . '<br>'; // 8
 echo "$num1 <br> $num2 <br>"; */
 
-//$ Funzioni impure
+//, Funzioni impure
 /* $counter = 0;
 echo $counter;
 function incrementa() {
